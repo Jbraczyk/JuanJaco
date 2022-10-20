@@ -1,0 +1,11 @@
+/* #nav {
+    padding-top: 2rem;
+    gap:1.5rem;
+} */
+
+@media screen and (min-width: 900px) {
+    #nav {
+        padding-top: 2.5rem;
+        gap: 1.5rem;
+    }
+}
