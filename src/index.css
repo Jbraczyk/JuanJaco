@@ -53,3 +53,7 @@ h1 {
 .wrap {
   flex-wrap: wrap;
 }
+
+.column {
+  flex-direction: column;
+}

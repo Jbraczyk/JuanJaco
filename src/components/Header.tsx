@@ -5,23 +5,23 @@ const isLoggedIn: boolean = true
 
 const linksData = {
   profile: {
-    href: '#',
-    name: 'Profile',
+    href: '/profile',
+    name: '🧍 Profile',
   },
   add: {
     href: '#',
-    name: 'Ajoute un son',
+    name: '🎤 Ajoute un son',
   },
   login: {
-    href: '#',
-    name: 'Login',
+    href: '/profile',
+    name: '👁️ Login',
   },
 }
 
 export const Header = () => {
   return (
-    <div className="header flex between">
-      <h1>JuanJaco v2</h1>
+    <div id="header" className="flex between">
+      <a onClick={() => window.location.href = '/' }><h1>JuanJaco v2</h1></a>
       <div id="nav" className="flex between wrap">
         {
           isLoggedIn ? (
@@ -30,7 +30,9 @@ export const Header = () => {
               <NavLink link={linksData.add}></NavLink>
             </>
           ) : (
-            <NavLink link={linksData.login}></NavLink>
+            <>
+              <NavLink link={linksData.login}></NavLink>
+            </>
           )
         }
       </div>

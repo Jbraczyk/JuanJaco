@@ -1,4 +1,5 @@
 #root {
+  width: 100%;
   max-width: 1980px;
   margin: 0 auto;
   padding-left: 2rem;
@@ -8,5 +9,9 @@
 @media screen and (min-width: 900px) {
   #root {
     margin: 0;
+  }
+
+  #main {
+    width: 100%;
   }
 }

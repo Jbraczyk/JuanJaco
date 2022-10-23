@@ -3,13 +3,11 @@ import './styles/UnitCard.css'
 
 type UnitProps = { unit: UnitType }
 
-function UnitCard(props: UnitProps) {
+export const UnitCard = ({ unit }: UnitProps) => {
   return (
     <div className="unit">
-        <p>{props.unit.name}</p>
-        <img src={props.unit.imgLink}></img>
+        <p>{unit.name}</p>
+        <img src={unit.imgLink}></img>
     </div>
   )
 }
-
-export default UnitCard

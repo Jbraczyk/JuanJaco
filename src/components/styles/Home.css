@@ -3,7 +3,7 @@
 } */
 
 @media screen and (min-width: 900px) {
-    #units {
+    #main {
         width: 100%;
     }
 }

@@ -1,7 +1,7 @@
 import { UnitType } from '../types'
+import { UnitCard } from './UnitCard'
 
-import UnitCard from './UnitCard'
-import './styles/Main.css'
+import './styles/Home.css'
 
 const units: Array<UnitType> = [
   {
@@ -69,13 +69,13 @@ const units: Array<UnitType> = [
   }
 ]
 
-export const Primary = () => {
+export const Home = () => {
   return (
-    <main>
-        <h2>Les sons</h2>
-        <div id="units" className="flex wrap">
-          { units.map(unit => <UnitCard key={unit.slug} unit={unit}></UnitCard>) }
-        </div>
-    </main>
+    <div className="flex column">
+      <h2>Les sons</h2>
+      <div className="flex wrap">
+        { units.map(unit => <UnitCard key={unit.slug} unit={unit}></UnitCard>) }
+      </div>
+    </div>
   )
 }
