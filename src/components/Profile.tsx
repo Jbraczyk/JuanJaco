@@ -80,7 +80,7 @@ export const Profile = () => {
         <div id="profile-buttons" className="flex column">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatum quos aspernatur, rem sint quaerat qui ad eos consequatur ea odit ex reprehenderit molestias iste temporibus quidem iusto culpa neque?</p>
           <a>Change ton mot de passe</a>
-          <form id="login-form" className="flex column">
+          <form id="default-form" className="flex column">
             <input type="password" name="password" placeholder="Mot de passe actuel" />
             <input type="password" name="new-password" placeholder="Nouveau mot de passe" />
             <input type="password" name="second-new-password" placeholder="Répeter le nouveau mot de passe" />

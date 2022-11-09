@@ -6,7 +6,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0f0f0f;
+  background: rgb(0,0,0);
+  background: linear-gradient(184deg, rgba(0,0,0,1) 65%, rgba(34,37,88,1) 87%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,12 +34,12 @@ body {
 }
 
 h1 {
-  font-size: 10em;
+  font-size: 5em;
 }
 
 @media screen and (min-width: 900px) {
   h1 {
-    font-size: 4.5em;
+    font-size: 5  .5em;
   }
 }
 

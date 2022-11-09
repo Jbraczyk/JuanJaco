@@ -15,3 +15,57 @@
     width: 100%;
   }
 }
+
+#default-form {
+  width: 30%;
+}
+
+#default-form input {
+  border: none;
+  height: 3em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  width: 100%;
+  background-color: black;
+  font-size: 1.2rem;
+  color: #707070;
+  border-radius: 30px;
+}
+
+#default-form input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #383838;
+}
+
+#default-form input::-moz-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #383838;
+}
+
+#default-form input::-webkit-input-placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #383838;
+}
+
+#default-form button {
+  background: linear-gradient(to right, #646cff, #646cff67);
+  border: none;
+  font-size: 1.2rem;
+  height: 3em;
+  border-radius: 30px;
+  width: 30%;
+}
+
+#default-form input:focus {
+  outline: solid #646cff 1px;
+  transition: 500ms;
+}
+
+#default-form input:hover {
+  outline: solid #646cff41 1px;
+  transition: 500ms;
+}
+

@@ -9,7 +9,7 @@ const linksData = {
     name: '🧍 Profile',
   },
   add: {
-    href: '#',
+    href: '/add',
     name: '🎤 Ajoute un son',
   },
   login: {

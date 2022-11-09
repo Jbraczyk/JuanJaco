@@ -1,5 +1,3 @@
-import './styles/Login.css'
-
 export const Login = () => {
   return (
     <form id="login-form" className="flex column">
