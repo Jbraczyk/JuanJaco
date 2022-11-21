@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
 
 import './styles/Add.css'
@@ -13,11 +12,11 @@ export function AddSong() {
   return (
     <form onSubmit={ handleSubmit(onSubmit) } id="default-form" className="flex column">
       <input type="text" placeholder="Nom du song" {...register("name", { required: "Required" })} />
-      { errors.name ? errors.name.message : null}
+      { errors.name ? errors.name.message : null }
       <input type="text" placeholder="Lien de l'image" {...register("imgLink", { required: "Required" })} />
-      { errors.imgLink ? errors.imgLink.message : null}
+      { errors.imgLink ? errors.imgLink.message : null }
       <input type="file" {...register("file", { required: "Required" })} />
-      { errors.file ? errors.file.message : null}
+      { errors.file ? errors.file.message : null } 
       <button type="submit">Nouveau son</button>
     </form>
   )

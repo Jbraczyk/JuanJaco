@@ -19,13 +19,6 @@ export function App() {
             <Route path="/add" element={ [<Header/>, <AddSong />] } />
           </Routes>
         </BrowserRouter>
-        {/* <BrowserRouter>
-          <Routes>
-            <Route path="/" element={ [<Header />, <Home />] } />
-            <Route path="profile" element={ [<Header/>, <Profile />] } />
-            <Route path="add" element={ [<Header/>, <AddSong />] } />
-          </Routes>
-        </BrowserRouter> */}
       </main>
     </div>
   )
