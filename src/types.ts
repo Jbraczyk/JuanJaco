@@ -3,7 +3,7 @@ export type UnitType = {
   slug: string,
   imgLink: string,
   mp3Path: string,
-  authorId: number
+  authorId: string
 }
 
 export type NavLinkType = {
