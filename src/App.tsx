@@ -1,25 +1,31 @@
-import { Header } from './components/Header'
+import { Header } from './components/layouts/Header'
 import { Home } from './components/Home'
 import { Profile } from './components/Profile'
 import { AddSong } from './components/AddSong'
-import { Login } from './components/Login'
+import { Login } from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 
 import './App.css'
 
-export const App = () => {
+export function App() {
   return (
     <div className="App">
-      <Header></Header>
       <main>
         <BrowserRouter>
-        <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="profile" element={ <Profile /> } />
-          <Route path="add" element={ <AddSong /> } />
-        </Routes>
+          <Routes>
+            <Route path="/" element={ <Login /> } />
+            <Route path="/home" element={ [<Header />, <Home />] } />
+            <Route path="/profile" element={ [<Header />, <Profile />] } />
+            <Route path="/add" element={ [<Header/>, <AddSong />] } />
+          </Routes>
         </BrowserRouter>
+        {/* <BrowserRouter>
+          <Routes>
+            <Route path="/" element={ [<Header />, <Home />] } />
+            <Route path="profile" element={ [<Header/>, <Profile />] } />
+            <Route path="add" element={ [<Header/>, <AddSong />] } />
+          </Routes>
+        </BrowserRouter> */}
       </main>
     </div>
   )
