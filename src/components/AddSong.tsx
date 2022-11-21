@@ -1,13 +1,23 @@
+import React, { useState } from 'react'
+import { useForm } from "react-hook-form";
+
 import './styles/Add.css'
 
-const isLoggedIn: boolean = true
+export function AddSong() {
+  
+  const { handleSubmit, register, formState: { errors } } = useForm()
+  const onSubmit = async(values) => {
+    console.log(values.file[0])
+  }
 
-export const AddSong = () => {
   return (
-    <form id="default-form" className="flex column">
-      <input type="text" name="name" placeholder="Nom du son" />
-      <input type="text" name="image-link" placeholder="Lien de l'image" />
-      <input type="file" name="mp3-file" />
+    <form onSubmit={ handleSubmit(onSubmit) } id="default-form" className="flex column">
+      <input type="text" placeholder="Nom du song" {...register("name", { required: "Required" })} />
+      { errors.name ? errors.name.message : null}
+      <input type="text" placeholder="Lien de l'image" {...register("imgLink", { required: "Required" })} />
+      { errors.imgLink ? errors.imgLink.message : null}
+      <input type="file" {...register("file", { required: "Required" })} />
+      { errors.file ? errors.file.message : null}
       <button type="submit">Nouveau son</button>
     </form>
   )
