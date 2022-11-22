@@ -31,7 +31,7 @@ const client = new Client({ intents: [
     GatewayIntentBits.GuildVoiceStates
 ] })
 
-async function createSoundBox(body) {
+async function createSoundBox(soundName) {
     const currentGuild = await client.guilds.fetch(DISCORD_SERVER_ID)
     const connection = joinVoiceChannel({
         channelId: DISCORD_CHANNEL_ID,
@@ -41,7 +41,7 @@ async function createSoundBox(body) {
 
     const stream = createAudioPlayer()
     connection.subscribe(stream)
-    const resource = createAudioResource(`./mp3/Bosetti.mp3`, {
+    const resource = createAudioResource(`./mp3/${soundName}.mp3`, {
         inputType: StreamType.Arbitrary,
     })
 
@@ -56,7 +56,7 @@ client.on('ready', () => {
 })
 
 app.post("/soundCall", async (req, res) => {
-  await createSoundBox(req.body)
+  await createSoundBox(req.body.name)
 
   return res.status(200).send(`${req.body.name} played!`)
 })
