@@ -1,0 +1,60 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: rgb(0,0,0);
+  background: linear-gradient(184deg, rgba(0,0,0,1) 65%, rgba(34,37,88,1) 87%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 5  .5em;
+  }
+}
+
+.flex { 
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
